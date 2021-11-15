@@ -13,6 +13,7 @@ $fixtures= new Fixtures();
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
         <title>Sportradar Calendar</title>
     </head>
     <body>
@@ -23,7 +24,7 @@ $fixtures= new Fixtures();
         </nav>
         <main>
             <h1>Sportradar Calendar</h1>
-          <!-- <h2>Add an event</h2>
+          <h2>Add an event</h2>
             <fieldset>
                 <legend style="display: none">Add an event</legend>
                 <form>
@@ -50,9 +51,18 @@ $fixtures= new Fixtures();
                         </select>
                     </label>
                 </form>
-            </fieldset> -->
+            </fieldset>
             <h2>Show events</h2>
-            <table>
+            <select id="selectSports" oninput="filterFixtures()">
+                <option>All competitions</option>
+                <option>Ice Hockey</option>
+                <option>Football</option>
+
+            </select>
+            <table id="fixturesTable">
+                <tr>
+                    <th>Date</th><th>Sports</th><th>Competition</th><th>Matchday</th><th>Home Team</th><th>Away Team</th>
+                </tr>
                <?php $fixtures->showFixtures(); ?>
             </table>
         </main>
