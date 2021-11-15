@@ -1,15 +1,15 @@
 <?php
 include("config.inc.php");
-include("db.class.php");
+include("Fixtures.class.php");
 
-$db= new db();
+$fixtures= new Fixtures();
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet">
@@ -23,7 +23,7 @@ $db= new db();
         </nav>
         <main>
             <h1>Sportradar Calendar</h1>
-            <h2>Add an event</h2>
+          <!-- <h2>Add an event</h2>
             <fieldset>
                 <legend style="display: none">Add an event</legend>
                 <form>
@@ -33,47 +33,28 @@ $db= new db();
                     </label>
                     <label>Select a sport:
                         <select>
-                            <!---Todo Function to select sport-->
+                            Todo Function to select sport
                             <option selected disabled value="0"></option>
                         </select>
                     </label>
                     <label>Select home team:
                         <select>
-                            <!---Todo Function to select team-->
+                            Todo Function to select team
                             <option selected disabled value="0">Select!</option>
                         </select>
                     </label>
                     <label>Select away team:
                         <select>
-                            <!---Todo Function to select sport-->
+                            Todo Function to select sport
                             <option selected disabled value="0">Select!</option>
                         </select>
                     </label>
                 </form>
-            </fieldset>
+            </fieldset> -->
             <h2>Show events</h2>
             <table>
-               <!---Todo Function to display games-->
-                <tr>
-                    <th>Date</th>
-                    <td>
-
-                    </td>
-                </tr>
-                <tr>
-                    <th>Sports</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Home Team</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Away Team</th>
-                    <td></td>
-                </tr>
+               <?php $fixtures->showFixtures(); ?>
             </table>
         </main>
-
     </body>
 </html>

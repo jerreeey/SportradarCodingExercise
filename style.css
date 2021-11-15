@@ -1,9 +1,19 @@
 table {
-    display: table;
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+table,
+td {
+    border: 1px solid #cecfd5;
 }
 table tr {
     display: table-cell;
 }
 table tr td {
     display: block;
+
+}
+th,
+td {
+    padding: 10px 15px;
 }
