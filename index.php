@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,6 @@
     <title>Sportradar Calendar</title>
 </head>
 <body>
-    
+    <p>Sample text</p>
 </body>
 </html>
