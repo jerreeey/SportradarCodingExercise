@@ -57,6 +57,7 @@ select {
 main li{
     list-style-type: none;
     padding: 0.2em;
+    margin-bottom: 0.5em;
 }
 input[type=button], input[type=submit], input[type=reset] {
     background-color: dodgerblue;
@@ -69,7 +70,4 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 h1{
     text-align: center;
-}
-main li{
-    margin-bottom: 0.5em;
 }

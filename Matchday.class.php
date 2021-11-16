@@ -6,7 +6,7 @@ include_once ("db.class.php");
 class Matchday
 {
 
-    function showAllMatchdays(){
+    function showAllMatchdays(){ //show all matchdays
         $db=new db();
         $teams= $db->getAll("Matchday");
 

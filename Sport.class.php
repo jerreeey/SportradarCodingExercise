@@ -5,7 +5,7 @@ include_once ("db.class.php");
 
 class Sport
 {
-    function showAllSports(){
+    function showAllSports(){//show all sports and assign the sportsID as ID
         $db=new db();
         $sports= $db->getAll("Sports");
 

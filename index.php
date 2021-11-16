@@ -16,7 +16,7 @@ $sport= new Sport();
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head> <!---Add jquery, script and css-file  -->
         <meta http-equiv="content-type" content="text/html; charset=utf-8
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,7 @@ $sport= new Sport();
         <script src="script.js"></script>
         <title>Sportradar Calendar</title>
     </head>
-    <body>
+    <body><!---navigation -->
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
@@ -36,7 +36,7 @@ $sport= new Sport();
         <main>
             <h1>Sportradar Calendar</h1>
           <h2>Add an event</h2>
-            <fieldset>
+            <fieldset><!---Form to add new events -->
                 <legend style="display: none">Add an event</legend>
                 <form id="AddGamesForm" method="post">
                     <ul>
@@ -81,7 +81,7 @@ $sport= new Sport();
                     </ul>
                 </form>
             </fieldset>
-            <h2>Show events</h2>
+            <h2>Show events</h2><!---table to show all events  -->
             <select id="selectSports" oninput="filterFixtures()">
                 <option>All sports</option>
                 <?php $sport->showAllSports(); ?>
