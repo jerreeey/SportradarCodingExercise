@@ -1,8 +1,16 @@
 <?php
 include("config.inc.php");
-include("Fixtures.class.php");
+include("Fixture.class.php");
+include("Team.class.php");
+include ("Competition.class.php");
+include ("Matchday.class.php");
+include("Sport.class.php");
 
-$fixtures= new Fixtures();
+$fixtures= new Fixture();
+$teams= new Team();
+$matchday= new Matchday();
+$competition= new Competition();
+$sport= new Sport();
 
 ?>
 
@@ -13,6 +21,7 @@ $fixtures= new Fixtures();
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="script.js"></script>
         <title>Sportradar Calendar</title>
     </head>
@@ -27,37 +36,44 @@ $fixtures= new Fixtures();
           <h2>Add an event</h2>
             <fieldset>
                 <legend style="display: none">Add an event</legend>
-                <form>
-                    <label>Pick a date:
+                <form id="AddGamesForm" method="post">
+                    <label>Select date:
 
-                        <input id="datetime" type="datetime-local">
+                        <input name="Time" id="datetime" type="datetime-local">
                     </label>
                     <label>Select a sport:
-                        <select>
-                            Todo Function to select sport
-                            <option selected disabled value="0"></option>
+                        <select name="Sport">
+                            <?php $sport->showAllSports(); ?>
+                        </select>
+                    </label>
+                    <label>Select competition:
+                        <select name="Competition">
+                            <?php $competition->showAllCompetitions(); ?>
+                        </select>
+                    </label>
+                    <label>Select matchday:
+                        <select name="Matchday">
+                            <?php $matchday->showAllMatchdays(); ?>
+
                         </select>
                     </label>
                     <label>Select home team:
-                        <select>
-                            Todo Function to select team
-                            <option selected disabled value="0">Select!</option>
+                        <select name="Home">
+                            <?php $teams->showAllTeams(); ?>
                         </select>
                     </label>
                     <label>Select away team:
-                        <select>
-                            Todo Function to select sport
-                            <option selected disabled value="0">Select!</option>
+                        <select name="Guest">
+                            <?php $teams->showAllTeams(); ?>
                         </select>
                     </label>
+                    <input type="submit" id="btnSubmit">Add game</input>
                 </form>
             </fieldset>
             <h2>Show events</h2>
             <select id="selectSports" oninput="filterFixtures()">
-                <option>All competitions</option>
-                <option>Ice Hockey</option>
-                <option>Football</option>
-
+                <option>All sports</option>
+                <?php $sport->showAllSports(); ?>
             </select>
             <table id="fixturesTable">
                 <tr>
