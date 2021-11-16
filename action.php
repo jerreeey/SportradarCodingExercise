@@ -1,6 +1,6 @@
 <?php
 
-include_once("Fixture.class.php");
+include_once("classes/Fixture.class.php");
 $fixtures = new Fixture();
 if($_POST['Time'] ){ //If Post request included DateTime of event save the Fixture
 

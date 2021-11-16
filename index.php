@@ -1,10 +1,10 @@
 <?php
 include("config.inc.php");
-include("Fixture.class.php");
-include("Team.class.php");
-include("Competition.class.php");
-include("Matchday.class.php");
-include("Sport.class.php");
+include("classes/Fixture.class.php");
+include("classes/Team.class.php");
+include("classes/Competition.class.php");
+include("classes/Matchday.class.php");
+include("classes/Sport.class.php");
 
 $fixtures= new Fixture();
 $teams= new Team();
