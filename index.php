@@ -2,8 +2,8 @@
 include("config.inc.php");
 include("Fixture.class.php");
 include("Team.class.php");
-include ("Competition.class.php");
-include ("Matchday.class.php");
+include("Competition.class.php");
+include("Matchday.class.php");
 include("Sport.class.php");
 
 $fixtures= new Fixture();

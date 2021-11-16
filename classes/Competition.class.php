@@ -1,6 +1,6 @@
 <?php
-include ("config.inc.php");
-include_once ("db.class.php");
+include("config.inc.php");
+include_once("db.class.php");
 
 
 class Competition
