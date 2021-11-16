@@ -27,9 +27,11 @@ $sport= new Sport();
     </head>
     <body>
         <nav>
-            <a href="index.php">Home</a>
-            <a href="index.php">Sportradar Calendar</a>
-            <a href="index.php">About us</a>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php">Sportradar Calendar</a></li>
+                <li><a href="index.php">About us</a></li>
+            </ul>
         </nav>
         <main>
             <h1>Sportradar Calendar</h1>
@@ -37,37 +39,41 @@ $sport= new Sport();
             <fieldset>
                 <legend style="display: none">Add an event</legend>
                 <form id="AddGamesForm" method="post">
-                    <label>Select date:
+                    <ul>
+                    <li><label>Select date:
 
                         <input name="Time" id="datetime" type="datetime-local">
-                    </label>
-                    <label>Select a sport:
+                    </label></li>
+                    <li><label>Select sport:
                         <select name="Sport">
                             <?php $sport->showAllSports(); ?>
                         </select>
-                    </label>
-                    <label>Select competition:
+                    </label></li>
+                    <li><label>Select competition:
                         <select name="Competition">
                             <?php $competition->showAllCompetitions(); ?>
                         </select>
-                    </label>
-                    <label>Select matchday:
+                    </label></li>
+                    <li><label>Select matchday:
                         <select name="Matchday">
                             <?php $matchday->showAllMatchdays(); ?>
 
                         </select>
-                    </label>
-                    <label>Select home team:
+                    </label></li>
+                    <li><label>Select home team:
                         <select name="Home">
                             <?php $teams->showAllTeams(); ?>
                         </select>
-                    </label>
-                    <label>Select away team:
+                    </label></li>
+                    <li><label>Select away team:
                         <select name="Guest">
                             <?php $teams->showAllTeams(); ?>
                         </select>
-                    </label>
-                    <input type="submit" id="btnSubmit">Add game</input>
+                    </label></li>
+                    <li>
+
+                        <input type="submit" id="btnSubmit" value="Add game"></li>
+                    </ul>
                 </form>
             </fieldset>
             <h2>Show events</h2>
