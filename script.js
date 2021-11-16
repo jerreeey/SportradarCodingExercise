@@ -13,13 +13,13 @@ $(document).ready(function () {
             data: form.serialize(),
             success: function (data) {
 
-                location.reload();
+               location.reload();
 
             }
         });
 
     });
-
+filter();
 });
 
 
@@ -42,6 +42,64 @@ function filterFixtures() {
         }
         else { //else hide row
             row.style.display = "none";
+        }
+    }
+}
+
+function filter(){
+    filterComp();
+    filterTeams();
+}
+
+function filterComp() {
+
+
+    let compSelect = document.getElementById("compSelect");
+    let options = compSelect.getElementsByTagName("option"); //get rows
+    let filter = $('#sportsSelect option:selected').attr('id');;//get Value of Dropdown
+
+
+    for (let option of options) {
+
+
+        if (filter === option.id) { //show row when value of dropdown equals ALL or one specific competition
+            option.style.display = "";
+        }
+        else { //else hide row
+            option.style.display = "none";
+        }
+    }
+}
+
+function filterTeams() {
+
+
+    let selectHome = document.getElementById("selectHome");
+    let selectGuest = document.getElementById("selectGuest");
+    let optionsHome = selectHome.getElementsByTagName("option"); //get rows
+    let optionsGuest = selectGuest.getElementsByTagName("option"); //get rows
+    let filter = $('#sportsSelect option:selected').attr('id');;//get Value of Dropdown
+
+
+    for (let option of optionsHome) {
+
+
+        if (filter === option.id) { //show row when value of dropdown equals ALL or one specific competition
+            option.style.display = "";
+        }
+        else { //else hide row
+            option.style.display = "none";
+        }
+    }
+
+    for (let option of optionsGuest) {
+
+
+        if (filter === option.id) { //show row when value of dropdown equals ALL or one specific competition
+            option.style.display = "";
+        }
+        else { //else hide row
+            option.style.display = "none";
         }
     }
 }

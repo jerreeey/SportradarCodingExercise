@@ -36,7 +36,7 @@ class db
 
     public function getAllGames(){
 
-        $stmt= $this->db->prepare("SELECT Team.teamName as Home, t2.teamName as Guest, `startTime`, `competitionName`, `matchdayName`, `sportsName` FROM `Game`  INNER JOIN `Competition` on `_competitionID`= Competition.competitionID  INNER JOIN `Team` as t2 on `_home`=t2.teamID INNER JOIN `Team` on `_away`= Team.teamID  INNER JOIN Matchday ON Matchday.matchdayID=`_matchdayID` INNER JOIN Sports on Competition._sportsID=Sports.sportsID");
+        $stmt= $this->db->prepare("SELECT Team.teamName as Home, t2.teamName as Guest, `startTime`, `competitionName`, `matchdayName`, `sportsName` FROM `Game`  INNER JOIN `Competition` on `_competitionID`= Competition.competitionID  INNER JOIN `Team`  on `_home`=Team.teamID INNER JOIN `Team` as t2 on `_away`= t2.teamID  INNER JOIN Matchday ON Matchday.matchdayID=`_matchdayID` INNER JOIN Sports on Competition._sportsID=Sports.sportsID");
         $stmt ->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

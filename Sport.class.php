@@ -7,11 +7,11 @@ class Sport
 {
     function showAllSports(){
         $db=new db();
-        $teams= $db->getAll("Sports");
+        $sports= $db->getAll("Sports");
 
-        foreach ($teams as $t){
+        foreach ($sports as $s){
 
-            echo "<option>". $t["sportsName"]."</option>";
+            echo "<option id='". $s['sportsID']."'>". $s["sportsName"]."</option>";
         }
 
     }

@@ -12,7 +12,7 @@ class Team
 
         foreach ($teams as $t){
 
-           echo "<option>". $t["teamName"]."</option>";
+           echo "<option id='".$t["_sportsID"]."'>". $t["teamName"]."</option>";
         }
 
     }

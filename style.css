@@ -70,3 +70,6 @@ input[type=button], input[type=submit], input[type=reset] {
 h1{
     text-align: center;
 }
+main li{
+    margin-bottom: 0.5em;
+}

@@ -44,32 +44,37 @@ $sport= new Sport();
 
                         <input name="Time" id="datetime" type="datetime-local">
                     </label></li>
-                    <li><label>Select sport:
-                        <select name="Sport">
+                    <li>
+                        <select id="sportsSelect" name="Sport" onchange="filter()" >
+                            <option disabled="true" selected="true">Select sport</option>
                             <?php $sport->showAllSports(); ?>
                         </select>
-                    </label></li>
-                    <li><label>Select competition:
-                        <select name="Competition">
+                    </li>
+                    <li>
+                        <select id= "compSelect" name="Competition">
+                            <option disabled="true" selected="true">Select competiion</option>
                             <?php $competition->showAllCompetitions(); ?>
                         </select>
-                    </label></li>
-                    <li><label>Select matchday:
+                   </li>
+                    <li>
                         <select name="Matchday">
+                            <option disabled="true" selected="true">Select Matchday</option>
                             <?php $matchday->showAllMatchdays(); ?>
 
                         </select>
-                    </label></li>
-                    <li><label>Select home team:
-                        <select name="Home">
+                    </li>
+                    <li>
+                        <select id="selectHome" name="Home">
+                            <option disabled="true" selected="true">Select Home Team</option>
                             <?php $teams->showAllTeams(); ?>
                         </select>
-                    </label></li>
-                    <li><label>Select away team:
-                        <select name="Guest">
+                    </li>
+                    <li>
+                        <select id="selectGuest" name="Guest">
+                            <option disabled="true" selected="true">Select Away Team</option>
                             <?php $teams->showAllTeams(); ?>
                         </select>
-                    </label></li>
+                    </li>
                     <li>
 
                         <input type="submit" id="btnSubmit" value="Add game"></li>
