@@ -37,7 +37,7 @@ $sport= new Sport();
             <h1>Sportradar Calendar</h1>
           <h2>Add an event</h2>
             <fieldset><!---Form to add new events -->
-                <legend style="display: none">Add an event</legend>
+                <legend style="display: none">Add event</legend>
                 <form id="AddGamesForm" method="post">
                     <ul>
                     <li><label>Select date:
@@ -58,20 +58,20 @@ $sport= new Sport();
                    </li>
                     <li>
                         <select name="Matchday">
-                            <option disabled="true" selected="true">Select Matchday</option>
+                            <option disabled="true" selected="true">Select matchday</option>
                             <?php $matchday->showAllMatchdays(); ?>
 
                         </select>
                     </li>
                     <li>
                         <select id="selectHome" name="Home">
-                            <option disabled="true" selected="true">Select Home Team</option>
+                            <option disabled="true" selected="true">Select home team</option>
                             <?php $teams->showAllTeams(); ?>
                         </select>
                     </li>
                     <li>
                         <select id="selectGuest" name="Guest">
-                            <option disabled="true" selected="true">Select Away Team</option>
+                            <option disabled="true" selected="true">Select away team</option>
                             <?php $teams->showAllTeams(); ?>
                         </select>
                     </li>
