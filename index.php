@@ -1,5 +1,5 @@
 <?php
-include("config.inc.php");
+
 include("classes/Fixture.class.php");
 include("classes/Team.class.php");
 include("classes/Competition.class.php");
